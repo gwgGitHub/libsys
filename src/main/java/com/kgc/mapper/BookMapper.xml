@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kgc.mapper.BookMapper">
+  <resultMap id="BaseResultMap" type="com.kgc.pojo.Book">
+    <id column="book_id" jdbcType="INTEGER" property="bookId" />
+    <result column="book_code" jdbcType="VARCHAR" property="bookCode" />
+    <result column="book_name" jdbcType="VARCHAR" property="bookName" />
+    <result column="book_type_id" jdbcType="INTEGER" property="bookTypeId" />
+    <result column="book_author" jdbcType="VARCHAR" property="bookAuthor" />
+    <result column="publish_press" jdbcType="VARCHAR" property="publishPress" />
+    <result column="publish_date" jdbcType="DATE" property="publishDate" />
+    <result column="is_borrow" jdbcType="INTEGER" property="isBorrow" />
+    <result column="created_by" jdbcType="VARCHAR" property="createdBy" />
+    <result column="creation_time" jdbcType="DATE" property="creationTime" />
+    <result column="last_update_time" jdbcType="DATE" property="lastUpdateTime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    book_id, book_code, book_name, book_type_id, book_author, publish_press, publish_date, 
+    is_borrow, created_by, creation_time, last_update_time
+  </sql>
+  <select id="selectByExample" parameterType="com.kgc.pojo.BookExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from book
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from book
+    where book_id = #{bookId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from book
+    where book_id = #{bookId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.kgc.pojo.BookExample">
+    delete from book
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.kgc.pojo.Book">
+    insert into book (book_id, book_code, book_name, 
+      book_type_id, book_author, publish_press, 
+      publish_date, is_borrow, created_by, 
+      creation_time, last_update_time)
+    values (#{bookId,jdbcType=INTEGER}, #{bookCode,jdbcType=VARCHAR}, #{bookName,jdbcType=VARCHAR}, 
+      #{bookTypeId,jdbcType=INTEGER}, #{bookAuthor,jdbcType=VARCHAR}, #{publishPress,jdbcType=VARCHAR}, 
+      #{publishDate,jdbcType=DATE}, #{isBorrow,jdbcType=INTEGER}, #{createdBy,jdbcType=VARCHAR}, 
+      #{creationTime,jdbcType=DATE}, #{lastUpdateTime,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kgc.pojo.Book">
+    insert into book
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="bookId != null">
+        book_id,
+      </if>
+      <if test="bookCode != null">
+        book_code,
+      </if>
+      <if test="bookName != null">
+        book_name,
+      </if>
+      <if test="bookTypeId != null">
+        book_type_id,
+      </if>
+      <if test="bookAuthor != null">
+        book_author,
+      </if>
+      <if test="publishPress != null">
+        publish_press,
+      </if>
+      <if test="publishDate != null">
+        publish_date,
+      </if>
+      <if test="isBorrow != null">
+        is_borrow,
+      </if>
+      <if test="createdBy != null">
+        created_by,
+      </if>
+      <if test="creationTime != null">
+        creation_time,
+      </if>
+      <if test="lastUpdateTime != null">
+        last_update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="bookId != null">
+        #{bookId,jdbcType=INTEGER},
+      </if>
+      <if test="bookCode != null">
+        #{bookCode,jdbcType=VARCHAR},
+      </if>
+      <if test="bookName != null">
+        #{bookName,jdbcType=VARCHAR},
+      </if>
+      <if test="bookTypeId != null">
+        #{bookTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="bookAuthor != null">
+        #{bookAuthor,jdbcType=VARCHAR},
+      </if>
+      <if test="publishPress != null">
+        #{publishPress,jdbcType=VARCHAR},
+      </if>
+      <if test="publishDate != null">
+        #{publishDate,jdbcType=DATE},
+      </if>
+      <if test="isBorrow != null">
+        #{isBorrow,jdbcType=INTEGER},
+      </if>
+      <if test="createdBy != null">
+        #{createdBy,jdbcType=VARCHAR},
+      </if>
+      <if test="creationTime != null">
+        #{creationTime,jdbcType=DATE},
+      </if>
+      <if test="lastUpdateTime != null">
+        #{lastUpdateTime,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.kgc.pojo.BookExample" resultType="java.lang.Long">
+    select count(*) from book
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update book
+    <set>
+      <if test="record.bookId != null">
+        book_id = #{record.bookId,jdbcType=INTEGER},
+      </if>
+      <if test="record.bookCode != null">
+        book_code = #{record.bookCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bookName != null">
+        book_name = #{record.bookName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bookTypeId != null">
+        book_type_id = #{record.bookTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="record.bookAuthor != null">
+        book_author = #{record.bookAuthor,jdbcType=VARCHAR},
+      </if>
+      <if test="record.publishPress != null">
+        publish_press = #{record.publishPress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.publishDate != null">
+        publish_date = #{record.publishDate,jdbcType=DATE},
+      </if>
+      <if test="record.isBorrow != null">
+        is_borrow = #{record.isBorrow,jdbcType=INTEGER},
+      </if>
+      <if test="record.createdBy != null">
+        created_by = #{record.createdBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.creationTime != null">
+        creation_time = #{record.creationTime,jdbcType=DATE},
+      </if>
+      <if test="record.lastUpdateTime != null">
+        last_update_time = #{record.lastUpdateTime,jdbcType=DATE},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update book
+    set book_id = #{record.bookId,jdbcType=INTEGER},
+      book_code = #{record.bookCode,jdbcType=VARCHAR},
+      book_name = #{record.bookName,jdbcType=VARCHAR},
+      book_type_id = #{record.bookTypeId,jdbcType=INTEGER},
+      book_author = #{record.bookAuthor,jdbcType=VARCHAR},
+      publish_press = #{record.publishPress,jdbcType=VARCHAR},
+      publish_date = #{record.publishDate,jdbcType=DATE},
+      is_borrow = #{record.isBorrow,jdbcType=INTEGER},
+      created_by = #{record.createdBy,jdbcType=VARCHAR},
+      creation_time = #{record.creationTime,jdbcType=DATE},
+      last_update_time = #{record.lastUpdateTime,jdbcType=DATE}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kgc.pojo.Book">
+    update book
+    <set>
+      <if test="bookCode != null">
+        book_code = #{bookCode,jdbcType=VARCHAR},
+      </if>
+      <if test="bookName != null">
+        book_name = #{bookName,jdbcType=VARCHAR},
+      </if>
+      <if test="bookTypeId != null">
+        book_type_id = #{bookTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="bookAuthor != null">
+        book_author = #{bookAuthor,jdbcType=VARCHAR},
+      </if>
+      <if test="publishPress != null">
+        publish_press = #{publishPress,jdbcType=VARCHAR},
+      </if>
+      <if test="publishDate != null">
+        publish_date = #{publishDate,jdbcType=DATE},
+      </if>
+      <if test="isBorrow != null">
+        is_borrow = #{isBorrow,jdbcType=INTEGER},
+      </if>
+      <if test="createdBy != null">
+        created_by = #{createdBy,jdbcType=VARCHAR},
+      </if>
+      <if test="creationTime != null">
+        creation_time = #{creationTime,jdbcType=DATE},
+      </if>
+      <if test="lastUpdateTime != null">
+        last_update_time = #{lastUpdateTime,jdbcType=DATE},
+      </if>
+    </set>
+    where book_id = #{bookId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kgc.pojo.Book">
+    update book
+    set book_code = #{bookCode,jdbcType=VARCHAR},
+      book_name = #{bookName,jdbcType=VARCHAR},
+      book_type_id = #{bookTypeId,jdbcType=INTEGER},
+      book_author = #{bookAuthor,jdbcType=VARCHAR},
+      publish_press = #{publishPress,jdbcType=VARCHAR},
+      publish_date = #{publishDate,jdbcType=DATE},
+      is_borrow = #{isBorrow,jdbcType=INTEGER},
+      created_by = #{createdBy,jdbcType=VARCHAR},
+      creation_time = #{creationTime,jdbcType=DATE},
+      last_update_time = #{lastUpdateTime,jdbcType=DATE}
+    where book_id = #{bookId,jdbcType=INTEGER}
+  </update>
+</mapper>

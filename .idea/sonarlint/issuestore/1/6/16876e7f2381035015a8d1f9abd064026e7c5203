@@ -1,0 +1,24 @@
+
+csquid:S1192"NDefine a constant instead of duplicating this literal "registerTime" 10 times.(üŒĞÕ
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(õÜ—ºşÿÿÿÿ
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(õÜ—ºşÿÿÿÿ
+[squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ìá¤
+
+\squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(Áš¹
+nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(óÎ³Ù
+msquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÏßÉe
+Xsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(í´Õûüÿÿÿÿ
+]squid:S1192"HDefine a constant instead of duplicating this literal "userId" 10 times.(İ§‰ 
+isquid:S1192"ODefine a constant instead of duplicating this literal "lastLogintime" 10 times.(´•´•ıÿÿÿÿ
+nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(·ü–
+_squid:S1192"JDefine a constant instead of duplicating this literal "password" 12 times.(­â›Î
+jsquid:S1192"PDefine a constant instead of duplicating this literal " cannot be null" 4 times.(õÜ—ºşÿÿÿÿ
+Rsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(Á½¼s
+]squid:S1192"HDefine a constant instead of duplicating this literal "gender" 12 times.(Ëéô—
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ÔÁñÍøÿÿÿÿ
+usquid:S1488"`Immediately return this expression instead of assigning it to the temporary variable "criteria".(¶Õ¯ì
+Ssquid:S1155">Use isEmpty() to check whether the collection is empty or not.(ÍÃ‘Æ
+[squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ìá¤
+
+_squid:S1192"JDefine a constant instead of duplicating this literal "userName" 12 times.( Ö¨•
+asquid:S1192"GDefine a constant instead of duplicating this literal "email" 12 times.(áÎ„µÿÿÿÿÿ

@@ -1,0 +1,12 @@
+
+Rsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(Á½¼s
+msquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÏßÉe
+usquid:S1488"`Immediately return this expression instead of assigning it to the temporary variable "criteria".(¶Õ¯ì
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ÔÁñÍøÿÿÿÿ
+nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(óÎ³Ù
+`squid:S1192"LDefine a constant instead of duplicating this literal "bookTypeId" 10 times.(“ñ‘Z
+[squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ìá¤
+
+Xsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(í´Õûüÿÿÿÿ
+csquid:S1192"NDefine a constant instead of duplicating this literal "bookTypeName" 12 times.(ÌâÔ“
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(õÜ—ºþÿÿÿÿ

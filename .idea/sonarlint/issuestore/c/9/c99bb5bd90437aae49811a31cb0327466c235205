@@ -1,0 +1,28 @@
+
+gsquid:S1192"MDefine a constant instead of duplicating this literal "publishDate" 10 times.(­ûøÇıÿÿÿÿ
+`squid:S1192"LDefine a constant instead of duplicating this literal "bookTypeId" 10 times.(“ñ‘Z
+esquid:S1192"KDefine a constant instead of duplicating this literal "createdBy" 12 times.(¦ç“üÿÿÿÿÿ
+]squid:S1192"HDefine a constant instead of duplicating this literal "bookId" 10 times.(ìÈÍŞ
+[squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ìá¤
+
+usquid:S1488"`Immediately return this expression instead of assigning it to the temporary variable "criteria".(¶Õ¯ì
+_squid:S1192"JDefine a constant instead of duplicating this literal "bookCode" 12 times.(ˆåŸ­
+hsquid:S1192"NDefine a constant instead of duplicating this literal "creationTime" 10 times.(ÂÄ‡šüÿÿÿÿ
+Ssquid:S1155">Use isEmpty() to check whether the collection is empty or not.(ÍÃ‘Æ
+msquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÏßÉe
+csquid:S1192"NDefine a constant instead of duplicating this literal "publishPress" 12 times.(‰ĞŞ
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ÔÁñÍøÿÿÿÿ
+Xsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(í´Õûüÿÿÿÿ
+nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(óÎ³Ù
+[squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ìá¤
+
+jsquid:S1192"PDefine a constant instead of duplicating this literal " cannot be null" 4 times.(õÜ—ºşÿÿÿÿ
+dsquid:S1192"JDefine a constant instead of duplicating this literal "isBorrow" 10 times.(‚ÕçÁşÿÿÿÿ
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(õÜ—ºşÿÿÿÿ
+asquid:S1192"LDefine a constant instead of duplicating this literal "bookAuthor" 12 times.(ö·ÑÊ
+nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(·ü–
+esquid:S1192"PDefine a constant instead of duplicating this literal "lastUpdateTime" 10 times.(Ä÷»
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(õÜ—ºşÿÿÿÿ
+Rsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(Á½¼s
+dsquid:S1192"JDefine a constant instead of duplicating this literal "bookName" 12 times.(ŠúÜùÿÿÿÿ
+\squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(Áš¹
