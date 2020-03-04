@@ -26,7 +26,7 @@
     <maven.compiler.target>1.7</maven.compiler.target>
     <pagehelper.version>5.1.2</pagehelper.version>
     <jstl.version>1.2</jstl.version>
-    <jackson.version>2.4.2</jackson.version>
+    <jackson.version>2.9.10.3</jackson.version>
     <servlet-api.version>2.4</servlet-api.version>
     <mybatis.spring.version>1.2.2</mybatis.spring.version>
   </properties>
