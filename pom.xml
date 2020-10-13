@@ -15,7 +15,7 @@
     <mybatis.version>3.2.8</mybatis.version>
     <maven.compiler.source>1.7</maven.compiler.source>
     <druid.version>1.0.9</druid.version>
-    <junit.version>4.12</junit.version>
+    <junit.version>4.13.1</junit.version>
     <mysql.version>5.1.32</mysql.version>
     <jsp-api.version>2.0</jsp-api.version>
     <commons-net.version>3.3</commons-net.version>
