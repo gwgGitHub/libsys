@@ -16,7 +16,7 @@
     <maven.compiler.source>1.7</maven.compiler.source>
     <druid.version>1.0.9</druid.version>
     <junit.version>4.12</junit.version>
-    <mysql.version>5.1.32</mysql.version>
+    <mysql.version>8.0.28</mysql.version>
     <jsp-api.version>2.0</jsp-api.version>
     <commons-net.version>3.3</commons-net.version>
     <slf4j.version>1.6.4</slf4j.version>
