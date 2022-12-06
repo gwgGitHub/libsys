@@ -18,7 +18,7 @@
     <junit.version>4.12</junit.version>
     <mysql.version>5.1.32</mysql.version>
     <jsp-api.version>2.0</jsp-api.version>
-    <commons-net.version>3.3</commons-net.version>
+    <commons-net.version>3.9.0</commons-net.version>
     <slf4j.version>1.6.4</slf4j.version>
     <mybatis.paginator.version>1.2.15</mybatis.paginator.version>
     <commons-lang3.version>3.3.2</commons-lang3.version>
