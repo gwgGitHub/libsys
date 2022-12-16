@@ -9,7 +9,7 @@
   <name>libsys Maven Webapp</name>
   <url>http://www.example.com</url>
   <properties>
-    <spring.version>4.2.4.RELEASE</spring.version>
+    <spring.version>5.2.20.RELEASE</spring.version>
     <commons-io.version>2.2</commons-io.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <mybatis.version>3.2.8</mybatis.version>
